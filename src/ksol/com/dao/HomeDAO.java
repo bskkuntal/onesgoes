@@ -11,13 +11,13 @@ import com.mysql.jdbc.Statement;
 
 import ksol.com.beans.Product;
 import ksol.com.connection.SingletonDBConnection;
+import ksol.com.services.HomeServices;
 
-public class HomeDAO {
+public class HomeDAO implements HomeServices {
 
-/*	private SingletonDBConnection dbSingletonConnection = SingletonDBConnection
-			.getInstance();
-*/
+	@Override
 	public List<Product> getLatestProducts(SingletonDBConnection dbSingletonConnection) {
+		// TODO Auto-generated method stub
 		try {
 			Connection connection = dbSingletonConnection.getConnection();
 
@@ -45,7 +45,11 @@ public class HomeDAO {
 			e.printStackTrace();
 		}
 		return null;
-		
 	}
+
+/*	private SingletonDBConnection dbSingletonConnection = SingletonDBConnection
+			.getInstance();
+*/
+
 
 }

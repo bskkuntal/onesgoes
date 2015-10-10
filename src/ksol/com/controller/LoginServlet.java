@@ -1,8 +1,6 @@
 package ksol.com.controller;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,25 +9,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import ksol.com.beans.Product;
-import ksol.com.connection.SingletonDBConnection;
-import ksol.com.dao.HomeDAO;
-import ksol.com.services.HomeServices;
-
 /**
- * Servlet implementation class HomeServlet
+ * Servlet implementation class LoginServlet
  */
-@WebServlet(urlPatterns = { "/home"})
-public class HomeServlet extends HttpServlet {
+@WebServlet("/login")
+public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    
-	private SingletonDBConnection dbSingletonConnection = SingletonDBConnection.getInstance();
-	private HomeServices homeDAO = new HomeDAO();
-	private List<Product> listProducts = new ArrayList<Product>();
+       
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public HomeServlet() {
+    public LoginServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -39,9 +29,7 @@ public class HomeServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		listProducts = homeDAO.getLatestProducts(dbSingletonConnection);
-		request.setAttribute("LastestProducts", listProducts);
-	    RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/index.jsp");
+		RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/WEB-INF/pages/loginPopUp.jsp");
 	    dispatcher.forward(request, response);
 	}
 
@@ -50,7 +38,8 @@ public class HomeServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request,response);
+		RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/home");
+	    dispatcher.forward(request, response);
 	}
 
 }

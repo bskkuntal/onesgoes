@@ -4,6 +4,8 @@ package ksol.com.connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+import ksol.com.utils.DATABASE_CONSTANT_KEY;
+
 import com.mysql.jdbc.Connection;
 
 public class SingletonDBConnection {
@@ -15,7 +17,10 @@ public class SingletonDBConnection {
 		super();
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			connection = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/eCommerce", "root", "1234");
+			connection = (Connection) DriverManager.getConnection(DATABASE_CONSTANT_KEY.DATABASE_HOST + ":" + 
+																  DATABASE_CONSTANT_KEY.DATABASE_PORT + "/" + 
+																  DATABASE_CONSTANT_KEY.DATABASE_NAME, 
+																  DATABASE_CONSTANT_KEY.DATABASE_USERNAME, DATABASE_CONSTANT_KEY.DATABASE_PASSWORD);
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {

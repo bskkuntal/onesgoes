@@ -23,7 +23,7 @@
 
 <!-- Bootstrap -->
 <link rel="stylesheet"
-	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
 <!-- Font Awesome -->
 <link rel="stylesheet"
@@ -336,13 +336,14 @@
 	<!-- End product widget area -->
 
 	<jsp:include page="WEB-INF/templates/_footer.jsp"></jsp:include>
+	
 
 	<!-- Latest jQuery form server -->
 	<script src="https://code.jquery.com/jquery.min.js"></script>
 
 	<!-- Bootstrap JS form CDN -->
 	<script
-		src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 	<!-- jQuery sticky menu -->
 	<script src="js/owl.carousel.min.js"></script>
@@ -353,5 +354,7 @@
 
 	<!-- Main Script -->
 	<script src="js/main.js"></script>
+	
+	<jsp:include page="WEB-INF/templates/_contentModal.jsp"></jsp:include>
 </body>
 </html>
