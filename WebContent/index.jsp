@@ -12,7 +12,8 @@
 <title>eCommerce - Online Shopping</title>
 
 <!-- Google Fonts -->
-<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600'
+<link
+	href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600'
 	rel='stylesheet' type='text/css'>
 <link
 	href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300'
@@ -335,7 +336,7 @@
 	<!-- End product widget area -->
 
 	<jsp:include page="WEB-INF/templates/_footer.jsp"></jsp:include>
-	
+
 
 	<!-- Latest jQuery form server -->
 	<script src="https://code.jquery.com/jquery.min.js"></script>
@@ -353,7 +354,7 @@
 
 	<!-- Main Script -->
 	<script src="js/main.js"></script>
-	
+
 	<jsp:include page="WEB-INF/templates/_contentModal.jsp"></jsp:include>
 </body>
 </html>
