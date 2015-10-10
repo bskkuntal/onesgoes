@@ -11,7 +11,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>eCommerce - Online Shopping</title>
 
-<!-- Google Fonts -->
+<!-- Google Fonts --> 
 <link
 	href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600'
 	rel='stylesheet' type='text/css'>
